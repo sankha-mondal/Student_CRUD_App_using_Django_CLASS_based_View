@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Detail</title>
+</head>
+<body>
+    <h1>Student Detail</h1>
+    <ol>
+        <li><b>Id:</b> {{ student.id }}</li>
+        <li><b>First Name:</b> {{ student.firstname }}</li>
+        <li><b>Last Name:</b> {{ student.lastname }}</li>
+        <li><b>Age:</b> {{ student.age }}</li>
+        <li><b>Test Score:</b> {{ student.testscore }}</li>    
+        <li><a href="/student/update_type1/{{ student.pk }}/">Update Student - Type1</a></li>
+        <li><a href="/student/update_type2/{{ student.pk }}/">Update Student - Type2</a></li>
+        <li><a href="/student/delete/{{ student.pk }}/">Delete Student</a></li>
+    </ol>
+
+    <button><a href="/students/">Back to Student List</a></button>
+</body>
+</html>
