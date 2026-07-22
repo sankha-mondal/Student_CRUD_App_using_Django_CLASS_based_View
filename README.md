@@ -12,3 +12,9 @@
 ## Student Details:
 <img width="544" height="480" alt="image" src="https://github.com/user-attachments/assets/7338ea5e-124b-4864-a37e-709489354867" />
 
+## Update Student:
+<img width="600" height="477" alt="image" src="https://github.com/user-attachments/assets/196fee0b-c21f-46d6-ab0c-1a69aa92a590" />
+
+
+## Delete Student:
+<img width="644" height="455" alt="image" src="https://github.com/user-attachments/assets/f5a8aa27-84a7-4942-bdd3-dd432e96c748" />
