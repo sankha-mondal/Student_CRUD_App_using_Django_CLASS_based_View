@@ -8,7 +8,7 @@ class Student(models.Model):
     age = models.IntegerField()
     testscore = models.FloatField()
 
-    # Get the absolute URL for the student detail view
+    # Get the absolute URL for the student detail view.
     # This method is used to get the URL for the detail view of a student instance.
     # It uses the reverse function to generate the URL based on the 'student-detail' 
     # URL pattern and the primary key (pk) of the student instance.

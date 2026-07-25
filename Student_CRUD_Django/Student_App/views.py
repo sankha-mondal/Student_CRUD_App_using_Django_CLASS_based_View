@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from django.shortcuts import render
 from django.views import View, generic
+from django.urls import reverse_lazy
 
 from Student_App.models import Student
 
@@ -45,6 +46,7 @@ class StudentCreateType1_View(generic.CreateView):
     # default template name would be 'student_form.html' in the 'Student_App/templates/Student_App/' directory
     # default context object name would be 'form' in the template
     template_name = 'Student_App/student_create_type1.html'
+    success_url = reverse_lazy('student-list')
     fields = ['firstname', 'lastname', 'age', 'testscore']
 
 ## Create a new student using the second method (using ModelForm)  - Type2
@@ -54,6 +56,7 @@ class StudentCreateType2_View(generic.CreateView):
     # default template name would be 'student_form.html' in the 'Student_App/templates/Student_App/' directory
     # default context object name would be 'form' in the template
     template_name = 'Student_App/student_create_type2.html'
+    success_url = reverse_lazy('student-list')
     fields = ['firstname', 'lastname', 'age', 'testscore']
 
 
@@ -66,6 +69,7 @@ class StudentUpdateType1_View(generic.UpdateView):
     # default template name would be 'student_form.html' in the 'Student_App/templates/Student_App/' directory
     # default context object name would be 'form' in the template
     template_name = 'Student_App/student_update_type1.html'
+    success_url = reverse_lazy('student-list')
     fields = ['age', 'testscore']
 
 ## Update an existing student using the second method (using ModelForm) - Type2
@@ -75,6 +79,7 @@ class StudentUpdateType2_View(generic.UpdateView):
     # default template name would be 'student_form.html' in the 'Student_App/templates/Student_App/' directory
     # default context object name would be 'form' in the template
     template_name = 'Student_App/student_update_type2.html'
+    success_url = reverse_lazy('student-list')
     fields = ['age', 'testscore']
 
 
@@ -88,4 +93,4 @@ class StudentDeleteView(generic.DeleteView):
     # default template name would be 'student_confirm_delete.html' in the 'Student_App/templates/Student_App/' directory
     # default context object name would be 'student' in the template
     template_name = 'Student_App/student_confirm_delete.html'
-    success_url = '/students/'
+    success_url = reverse_lazy('student-list')
