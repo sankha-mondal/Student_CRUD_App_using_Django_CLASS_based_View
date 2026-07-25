@@ -12,6 +12,7 @@ class Student(models.Model):
     # This method is used to get the URL for the detail view of a student instance.
     # It uses the reverse function to generate the URL based on the 'student-detail' 
     # URL pattern and the primary key (pk) of the student instance.
+    # Note: This will be ignored if the success_url is defined in the CreateView or UpdateView.
     def get_absolute_url(self):
         return reverse('student-detail', kwargs={'pk': self.pk})
 
